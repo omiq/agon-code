@@ -1112,6 +1112,7 @@ void game_loop() {
     // Collision
     switch (c)
     {
+        case 102:
         case 166:
             // Wall               
             obstruction=true;
@@ -1165,15 +1166,18 @@ void game_loop() {
             score+=5;
             break;
 
+        case 81:
         case 145: // Potion
             score+=15;
             magic+=100;
             break;
 
+        case 90:
         case 154: // Cash money
             score+=15;
             break;
 
+        case 83:
         case 147: // Health
             health+=25;
             if(health>100) health=100; // Can't be more than 100%!
@@ -1195,6 +1199,7 @@ void game_loop() {
 
 /* ^^ Enemies */
 
+        case 88:
         case 152: // Idol
             score+=10;
             idols+=1;
